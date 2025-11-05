@@ -1,0 +1,269 @@
+/* ===== FUENTE PERSONALIZADA ===== */
+@font-face {
+    font-family: 'NewYork';
+    src: url('./fonts/NewYork-Personal-Use.otf') format('opentype');
+}
+
+/* ===== COLORES DEL SISTEMA ===== */
+:root {
+    --primary: #0e3a70;
+    --accent: #1985ff;
+    --light: #ffffff;
+    --text: #333333;
+    --grey: #7486a0;
+}
+
+/* ===== RESET GENERAL ===== */
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+.section {
+    padding: 80px 7%;
+}
+
+.grey {background: var(--grey);}
+
+
+/* ===== NAV ===== */
+.logo {
+    font-family: 'NewYork', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.topheader {
+    background: var(--primary);
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index:100;
+}
+
+.Menu-Horizontal {
+    list-style: none;
+    display: flex;
+}
+
+.Menu-Horizontal a {
+    padding: 10px 15px;
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.Menu-Horizontal a:hover {
+    color: var(--accent);
+}
+
+
+/* ===== HERO ===== */
+.hero {
+    background: var(--primary);
+    color: var(--light);
+    padding: 130px 7% 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-general-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-title {
+    font-family: 'NewYork', serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN HERO moderno */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 36px;
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--light);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 25px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.div-hero-img img {
+    width: 380px;
+    border-radius: 10px;
+}
+
+
+/* ===== SERVICIOS ===== */
+.section h2 {
+    font-family: 'NewYork', serif;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.card {
+    background: var(--light);
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid #d6ddea;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.card i {
+    font-size: 2.4rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-family: 'NewYork', serif;
+}
+
+
+/* ===== QUIÉNES SOMOS ===== */
+.div-general-quienes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.div-general-quienes img {
+    width: 420px;
+    border-radius: 10px;
+}
+
+
+/* ===== CONTACTO ===== */
+.form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+.form button {
+    background: var(--accent);
+    color: var(--light);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form button:hover {
+    background: #0b65cc;
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--primary);
+    color: var(--light);
+    padding: 18px;
+    text-align: center;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+    .div-general-hero,
+    .div-general-quienes {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div-hero-img img,
+    .div-general-quienes img {
+        width: 90%;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* ===== POR QUÉ ELEGIRNOS ===== */
+.elegirnos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.item-elegir {
+    background: var(--light);
+    border: 1px solid #d6ddea;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.item-elegir:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    transform: translateY(-6px);
+}
+
+.item-elegir h3 {
+    font-family: 'NewYork', serif;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+
